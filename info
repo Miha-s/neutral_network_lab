@@ -1,0 +1,17 @@
+<script async src="https://cse.google.com/cse.js?cx=40bfffb8f0aa742b4">
+</script>
+<div class="gcse-search"></div>
+
+
+
+api key
+ AIzaSyAMn2eqUp5Jpc_bX8CPNlSPm6lH5RnZ2R8 
+ 
+https://www.googleapis.com/customsearch/v1?key=AIzaSyAMn2eqUp5Jpc_bX8CPNlSPm6lH5RnZ2R8&cx=40bfffb8f0aa742b4&q=winter%20landscape&searchType=image&start=100&siteSearch=www.facebook.com
+ 
+ 
+Links
+Programmable search Engine - https://developers.google.com/custom-search/docs/overview
+api specification? - https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
+serpapi - https://serpapi.com/users/welcome
+google api - https://github.com/googleapis/google-api-python-client/tree/main
