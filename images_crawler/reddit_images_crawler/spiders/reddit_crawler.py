@@ -17,7 +17,16 @@ class RedditSpider(scrapy.Spider):
                 )
 
     def parse(self, response, tag):
-        for url in response.css("a.thumbnail::attr(href)").getall():
+        load_only_thumbnail = self.settings.get("LOAD_ONLY_THUMBNAIL")
+        query = ""
+        if load_only_thumbnail:
+            query = "a.thumbnail.invisible-when-pinned img::attr(src)"
+        else:
+            query = "a.thumbnail::attr(href)"
+
+        for url in response.css(query).getall():
+            if not url.startswith("https:"):
+                url = "https:" + url
             image = ImageItem(url=url, tag=tag)
             yield image
 

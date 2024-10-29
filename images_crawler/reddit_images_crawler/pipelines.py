@@ -18,7 +18,7 @@ from scrapy.pipelines.images import ImagesPipeline
 
 class InternalImagePipeline(ImagesPipeline):
     headers = {
-        "Host": "i.redd.it",
+        # "Host": "i.redd.it",
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
     }
@@ -30,7 +30,7 @@ class InternalImagePipeline(ImagesPipeline):
             raise DropItem("Failed to retrieve image url")
         if not url.endswith((".jpg", ".png", ".jpeg")):
             raise DropItem("Not image format")
-        
+
         yield scrapy.Request(url, headers=self.headers)
 
     def file_path(self, request, response=None, info=None, *, item=None):
@@ -41,7 +41,7 @@ class InternalImagePipeline(ImagesPipeline):
             raise DropItem("Failed to retrieve image url")
         if not tag:
             raise DropItem(f"Failed to retrieve image tag {url}")
-        
+
         filename = url.split("/")[-1].split(".")[0]
         path = os.path.join(tag, filename + ".jpg")
         return path

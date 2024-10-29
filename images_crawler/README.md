@@ -13,3 +13,8 @@ To be able to save and later continue scrolls, you need to tell teh directory, w
 ```
 scrapy crawl old.reddit.com -s JOBDIR=crawls/reddit_spider
 ```
+
+Testing a page from reddit
+```
+scrapy shell https://old.reddit.com/r/winterporn/new/
+```
