@@ -15,3 +15,7 @@ Programmable search Engine - https://developers.google.com/custom-search/docs/ov
 api specification? - https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
 serpapi - https://serpapi.com/users/welcome
 google api - https://github.com/googleapis/google-api-python-client/tree/main
+
+image preprocessing - https://www.tensorflow.org/tutorials/images/classification#visualize_training_results
+image_dataset_from_directory - https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image_dataset_from_directory
+data augmentation - https://www.tensorflow.org/tutorials/images/data_augmentation

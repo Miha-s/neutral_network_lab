@@ -92,12 +92,19 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 SUBREDDITS = {
-    "winter": ["snowing", "WinterPorn"],
-    "summer": ["SummerPorn"],
-    "spring": ["SpringPorn"],
-    "autumn": ["AutumnPorn"],
+    # "winter": ["WinterPorn"],  # +? snowing
+    # "summer": [
+    #     "SummerPorn",
+    #     {"LandscapePhotography": "summer"},
+    #     {"EarthPorn": "summer"},
+    # ],
+    "spring": [
+        "SpringPorn",
+        {"EarthPorn": "spring"},
+    ],
+    # "autumn": ["AutumnPorn"],
 }
 IMAGES_STORE = "./storage"
 MEDIA_ALLOW_REDIRECTS = True
 DOWNLOAD_TIMEOUT = 500
-LOAD_ONLY_THUMBNAIL= True
+LOAD_ONLY_THUMBNAIL = True
